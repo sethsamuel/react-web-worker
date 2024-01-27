@@ -21,7 +21,7 @@ export default () => {
   }, []);
   return (
     <div>
-      <h1>Big Array</h1>
+      <h1>Big Array (Inline)</h1>
       <div className="card">Biggest number is {data[0]}</div>
     </div>
   );
