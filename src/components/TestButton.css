@@ -1,0 +1,66 @@
+button {
+  padding: 20px;
+  margin: 20px;
+  white-space: nowrap;
+}
+
+.animation_conatiner {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  animation: travel 2s linear 0s infinite;
+}
+.animation_conatiner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  animation: color 2s linear 0s infinite;
+}
+
+@keyframes travel {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  45% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: red;
+  }
+  45% {
+    background-color: yellow;
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  75% {
+    background-color: blue;
+  }
+
+  100% {
+    background-color: red;
+  }
+}

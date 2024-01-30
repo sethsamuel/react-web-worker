@@ -15,7 +15,7 @@ enum Demos {
 }
 
 function App() {
-  const [load, set_load] = useState<Demos>(Demos.game_worker);
+  const [load, set_load] = useState<Demos>(Demos.none);
 
   const on_demo_change: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
     set_load(parseInt(e.target.value));
@@ -44,6 +44,15 @@ function App() {
       ) : load === Demos.game_worker ? (
         <GameWorker />
       ) : null}
+      <table>
+        <tbody>
+          {new Array(50).fill(0).map((_, i) => (
+            <tr key={i}>
+              <td>{i}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }
